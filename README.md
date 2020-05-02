@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## PROJETO PUNK API
 
-## Available Scripts
+### Objetivo
 
-In the project directory, you can run:
+O objetivo desse desafio é medir o conhecimento do aluno em relação ao desenvolvimento de aplicativos Web com foco no front-end.
 
-### `npm start`
+### API
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://punkapi.com/documentation/v2
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Necessário para o desenvolvimento
 
-### `npm test`
+https://github.com/facebook/create-react-app (Para criar o projeto)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://reacttraining.com/react-router/web/guides/quick-start ( Para criar rotas no projeto)
 
-### `npm run build`
+### Requisitos
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Ao acessar a aplicação, o usuário deverá visualizar uma listagem de produtos que irá exibir os seguintes dados: image_url, name e tagline. Essas informações estão disponíveis na api. Além disso, cada item da lista deverá possui um botão de “detalhes do produto”.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Na página de detalhamento do produto deverá ser exibido image_url, name e tagline, first_brewed, description, ingredients e um botão para retornar para a listagem.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Adicionais não obrigatórios
 
-### `npm run eject`
+- Paginação para a listagem de produtos.
+	- O adicional irá garantir 2(dois) pontos na avaliação.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prazos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O prazo final para entrega do projeto será para o dia 11/05, o projeto deverá estar disponível no GIT(https://github.com/) e o link do repositório deverá ser encaminhado para o email neliofrazac@gmail.com.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Por favor, no assunto informar o seu nome acompanhado o texto
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+“projeto disciplina javaScript”.
 
-## Learn More
+### Slides
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Introdução a javaScript](https://speakerdeck.com/neliofrazao/aula-de-introducao-a-js)
+- [Trabalhando com Arrays e Objetos](https://speakerdeck.com/neliofrazao/trabalhando-com-arrays-e-objetos)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Links do repositório com o projeto desenvolvido em
 
-### Code Splitting
+- [Aula](https://github.com/neliofrazao/unipe-phonebook)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Links para estudo
 
-### Analyzing the Bundle Size
+- https://pt-br.reactjs.org/docs/getting-started.html
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API
 
-### Making a Progressive Web App
+- https://braziljs.org/blog/fetch-api-e-o-javascript/
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- https://skylab.rocketseat.com.br/node/curso-java-script
 
-### Advanced Configuration
+- https://skylab.rocketseat.com.br/node/curso-react-js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Links comentados em aula
 
-### Deployment
+- https://material-ui.com/
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- https://react-bootstrap.github.io/getting-started/introduction/
 
-### `npm run build` fails to minify
+- https://cssinjs.org/react-jss/?v=v10.1.1
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- https://styled-components.com/
+
+- https://reacttraining.com/react-router/web/guides/quick-start
+
+- https://webpack.js.org/
+
+- https://github.com/axios/axios
+
+### Observações finais
+
+O aluno poderá fazer uso de qualquer biblioteca para auxiliar o desenvolvimento desse projeto.
