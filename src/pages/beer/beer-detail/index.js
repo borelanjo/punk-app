@@ -3,9 +3,14 @@ import BeerService from '../../../services/beer-service';
 
 import Load from '../../../components/load';
 import Header from '../../../components/header';
-import Button from '../../../components/button';
-import { Card, CardContent, CardAction } from '../../../components/cards';
 import { Link } from 'react-router-dom';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 export default class BeerDetail extends Component {
   service = new BeerService();
@@ -25,9 +30,7 @@ export default class BeerDetail extends Component {
   async getBeerData() {
     try {
       const { id } = this.props.match.params;
-      console.log(id);
       const res = await this.service.findById(id);
-      console.log(res);
       this.setState({ beer: res.data[0] });
     } catch (error) {
       console.error(error);
@@ -58,18 +61,25 @@ export default class BeerDetail extends Component {
           <Load />
         ) : (
           <>
-            <Header title={name}></Header>
-            <Card key={id}>
-              <CardContent>
-                <ul className="beer-item">
-                  <li>
-                    <img src={image_url} alt={name} />
-                  </li>
-                  <li>Name: {name}</li>
-                  <li>Tagline: {tagline}</li>
-                  <li>First Brewed: {first_brewed}</li>
-                  <li>Description: {description}</li>
-                  <li>
+            <Header title="Punk App"></Header>
+            <Card key={id} style={{ display: 'flex' }}>
+              <CardActionArea>
+              <Grid container spacing={3}>
+              <Grid item xs={6}>
+                <CardContent>
+                  <Typography component="h5" variant="h5">
+                    {name}
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary">
+                    {tagline}
+                  </Typography>
+                  <Typography variant="body1" color="textSecondary">
+                    {first_brewed}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    {description}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
                     Ingredients:
                     <ul>
                       <li>
@@ -89,14 +99,19 @@ export default class BeerDetail extends Component {
                         ))}
                       </li>
                     </ul>
-                  </li>
-                </ul>
-              </CardContent>
-              <CardAction>
+                  </Typography>
+                </CardContent>
+                </Grid>
+                <Grid item xs={6}>
+                <img src={image_url} alt={name} />
+                </Grid>
+                </Grid>
+              </CardActionArea>
+              <CardActions>
                 <Link to={'/'}>
-                  <Button size="small"> Voltar</Button>
+                  <ArrowBackIcon></ArrowBackIcon>
                 </Link>
-              </CardAction>
+              </CardActions>
             </Card>
           </>
         )}
