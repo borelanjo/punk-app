@@ -9,5 +9,9 @@ export default class BeerService {
     return this.api.get("");
   }
 
+  findById(id) {
+    return this.api.get(`/${id}`);
+  }
+
 
 }

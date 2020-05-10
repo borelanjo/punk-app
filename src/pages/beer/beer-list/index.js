@@ -6,7 +6,9 @@ import BeerService from '../../../services/beer-service';
 
 import Load from '../../../components/load';
 import Header from '../../../components/header';
-import { Card, CardContent } from '../../../components/cards';
+import Button from '../../../components/button';
+import { Card, CardContent, CardAction } from '../../../components/cards';
+import { Link } from 'react-router-dom';
 
 export default class BeerList extends React.Component {
   service = new BeerService();
@@ -22,6 +24,12 @@ export default class BeerList extends React.Component {
     });
   }
 
+  handleClickDetail(id) {
+    this.service.findById(id).then((res) => {
+      console.log(res);
+    });
+  }
+
   render() {
     return (
       <>
@@ -32,7 +40,7 @@ export default class BeerList extends React.Component {
             <Header></Header>
             <div>
               {this.state.beers.map((beer) => (
-                <Card>
+                <Card key={beer.id}>
                   <CardContent>
                     <ul className="beer-item">
                       <li>
@@ -42,6 +50,11 @@ export default class BeerList extends React.Component {
                       <li>{beer.tagline}</li>
                     </ul>
                   </CardContent>
+                  <CardAction>
+                    <Link to={`/${beer.id}`}>
+                      <Button size="small"> Detalhes</Button>
+                    </Link>
+                  </CardAction>
                 </Card>
               ))}
             </div>
